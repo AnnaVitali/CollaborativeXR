@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 const host = 'localhost'//webXR works only on https connection
 
+
 /* FOR HTTPS connection
 https.createServer(
     {
