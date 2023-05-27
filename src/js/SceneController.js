@@ -1,16 +1,22 @@
+const RootModel = require("./model/RootModel.js");
 class SceneController{
     constructor(){
-        this.supportedWebXRSession = ['immersive-ar', 'immersive-vr', 'immersive-xr'];
+        this.model = undefined;
+        this.canvas = document.getElementById("renderCanvas");
     }
 
-    createWebXRSession(sessionType){
-        console.log(this.supportedWebXRSession)
-        if(!this.supportedWebXRSession.includes(sessionType)){
-            throw new Error("The required webXR session is not supported");
-        }else{
-
-        }
+    renderAugmentedRealityExperience(){
+       this.model = RootModel.instantiateARSceneModel(this.canvas);
     }
+
+    renderVirtualRealityExperience(){
+        this.model = RootModel.instantiateVRSceneModel(this.canvas);
+    }
+
+    renderExtendedRealityExperience(){
+        this.model = RootModel.instantiateXRSceneModel(this.canvas);
+    }
+
 }
 
 module.exports = SceneController;

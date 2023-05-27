@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "mocha ./test/js/*.js --recursive --reporter spec"
+    "test": "mocha -r jsdom-global/register ./test/js/*.js --recursive --reporter spec"
   },
   "repository": {
     "type": "git",
@@ -21,8 +21,12 @@
   "homepage": "https://github.com/AnnaVitali/CollaborativeXR#readme",
   "dependencies": {
     "chai": "^4.3.7",
+    "croquet": "^0.1.7-lerna.0",
     "express": "^4.18.2",
+    "jsdom": "^22.0.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "^10.2.0",
+    "mocha-jsdom": "^2.0.0",
     "unit.js": "^2.1.1"
   }
 }

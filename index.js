@@ -27,3 +27,13 @@ app.get("/", function (req, res) {
 app.listen(port, host, () => {
     console.log('Server started at https://' + host + ':' + port);
 })
+
+const Scene = require("./src/js/Scene.js");
+const SessionType = require("./src/js/SessionType.js");
+const XRSceneModel = require("./src/js/model/XRSceneModel.js");
+
+const scene = new Scene();
+const controller = scene.controller;
+
+scene.createScene(SessionType.XRSession);
+console.log(scene.controller.model);
