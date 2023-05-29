@@ -17,12 +17,13 @@ https.createServer(
         console.log('Server started at https://' + host + ':' + port);
     });
 */
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(__dirname + '/src'));
+app.use(express.static(__dirname + '/test'));
 
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, 'public/html/index.html'));
+    res.sendFile(path.join(__dirname, '/src/html/index.html'));
 })
 
 app.listen(port, host, () => {
-    console.log('Server started at https://' + host + ':' + port);
+    console.log('Server started at http://' + host + ':' + port);
 })
