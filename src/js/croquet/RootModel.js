@@ -1,5 +1,4 @@
 class RootModel extends Croquet.Model {
-
     /**
     * Initialize the Model.
     * */
@@ -47,8 +46,6 @@ class RootModel extends Croquet.Model {
 
 }
 
-
 RootModel.register("RootModel");
-
 
 export { RootModel };
