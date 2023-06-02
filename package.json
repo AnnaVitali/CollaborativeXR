@@ -1,0 +1,35 @@
+{
+  "name": "collaborativexr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "framework.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaVitali/CollaborativeXR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaVitali/CollaborativeXR/issues"
+  },
+  "homepage": "https://github.com/AnnaVitali/CollaborativeXR#readme",
+  "dependencies": {
+    "@croquet/croquet": "^1.0.5",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "express": "^4.18.2",
+    "https-browserify": "^1.0.0",
+    "stream-browserify": "^3.0.0",
+    "stream-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.4",
+    "babel-loader": "^9.1.2",
+    "webpack": "^5.84.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
